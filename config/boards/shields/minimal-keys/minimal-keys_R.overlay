@@ -19,7 +19,14 @@
                 <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
                 <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
 };
+/ {
+    key-matrix {
+        drive-delay-us = <40>;   /* 40 µs だけ列出力 */
+        drive-once;              /* 列ごとに Hi-Z 戻す */
+        /* Row/Col は前ターンで確定した配列をそのまま */
+    };
 
+    };
 / {
     trackball_listener {
         compatible = "zmk,input-listener";
@@ -57,10 +64,13 @@
 
     trackball: trackball@0 {
         status = "okay";
-        compatible = "pixart,pmw3610";
+        compatible = "zmk,pmw3610";
         reg = <0>;
         spi-max-frequency = <2000000>;
-        irq-gpios =  <&xiao_d 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        label = "PMW3610";
+        /*irq-gpios =  <&xiao_d 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;*/
+        /* D3 = MOTION 割り込み（Low パルス）*/
+        int-gpios = <&xiao_d 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         automouse-layer = <6>;
         scroll-layers = <3>;
 
