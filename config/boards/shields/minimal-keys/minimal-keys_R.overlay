@@ -77,3 +77,8 @@
 };
 
 
+/ {
+    aliases {
+        zmk-trackball = &trackball;
+    };
+};
