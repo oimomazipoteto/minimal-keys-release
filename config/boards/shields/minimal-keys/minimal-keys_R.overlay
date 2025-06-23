@@ -69,7 +69,7 @@
         label = "PMW3610";
         /*irq-gpios =  <&xiao_d 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;*/
          /* Motion interrupt (MOTION pin) on D3, active low */
-        int-gpios = <&xiao_d 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        irq-gpios = <&xiao_d 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         automouse-layer = <6>;
         scroll-layers = <3>;
 
