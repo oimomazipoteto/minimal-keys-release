@@ -21,12 +21,6 @@
 };
 
 / {
-    key-matrix {
-        drive-delay-us = <40>;   /* Drive each column for 40 µs */
-        drive-once;              /* Return columns to Hi-Z between scans */
-    };
-
-
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
@@ -59,26 +53,16 @@
     pinctrl-0 = <&spi0_default>;
     pinctrl-1 = <&spi0_sleep>;
     pinctrl-names = "default", "sleep";
-    cs-gpios = <&xiao_d 7 GPIO_ACTIVE_LOW>;
+    cs-gpios = <&gpio0 7 GPIO_ACTIVE_LOW>;
 
     trackball: trackball@0 {
         status = "okay";
         compatible = "pixart,pmw3610";
         reg = <0>;
         spi-max-frequency = <2000000>;
-        label = "PMW3610";
-        /*irq-gpios =  <&xiao_d 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;*/
-         /* Motion interrupt (MOTION pin) on D3, active low */
         irq-gpios = <&gpio0 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         automouse-layer = <6>;
         scroll-layers = <3>;
 
-    };
-};
-
-
-/ {
-    aliases {
-        zmk-trackball = &trackball;
     };
 };
