@@ -59,7 +59,7 @@
         compatible = "pixart,pmw3610";
         reg = <0>;
         spi-max-frequency = <2000000>;
-        irq-gpios = <&xiao_d 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;  // MOTION: P0.29_A3_D3
+        irq-gpios = <&gpio0 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;  // MOTION: P0.29_A3_D3
         automouse-layer = <6>;
         scroll-layers = <3>;
     };
