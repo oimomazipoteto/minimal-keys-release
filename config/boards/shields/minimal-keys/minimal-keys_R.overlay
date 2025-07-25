@@ -49,7 +49,7 @@
 &spi0 {
     status = "okay";
     compatible = "nordic,nrf-spim";
-    pinctrl-0 = <&spi0_sw>;
+    pinctrl-0 = <&spi0_default>;
     pinctrl-1 = <&spi0_sleep>;
     pinctrl-names = "default", "sleep";
     cs-gpios = <&xiao_d 7 GPIO_ACTIVE_LOW>;  // CS: P1.12_D7_RX
