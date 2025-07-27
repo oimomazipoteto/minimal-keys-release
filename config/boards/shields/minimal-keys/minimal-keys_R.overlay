@@ -63,4 +63,13 @@
         automouse-layer = <6>;
         scroll-layers = <3>;
     };
+
+    &left_encoder {
+    status = "okay";
+    // 実際のピン割り当てに合わせて修正してください
+    // 回路図を見て、EC11のA相とB相がどのピンに接続されているか確認
+    a-gpios = <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  // EC11のA相
+    b-gpios = <&xiao_d 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  // EC11のB相
+    // EC11のスイッチ部分はRC(0,5)としてマトリックスに組み込まれている
+};
 };
