@@ -4,6 +4,7 @@
     chosen {
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
+        zmk,battery = &xiao_battery_voltage_divider;
     };
 
     default_transform: keymap_transform_0 {
@@ -47,4 +48,13 @@
         sensors = <&left_encoder &right_encoder>;
         triggers-per-rotation = <24>;
     };
+
+    /* XIAO BLEのバッテリ電圧分圧ノード定義（バッテリ測定用）*/
+    xiao_battery_voltage_divider: vbatt {
+    status = "okay";
+    compatible = "zmk,battery-voltage-divider";
+    label = "XIAO voltage divider";
+    io-channels = <&adc 7>;          /* ADCチャンネル7 = P0.31 */
+    output-ohms = <470000>;         /* 下側の抵抗値 470kΩ */
+    full-ohms = <1470000>;          /* 上下合計の抵抗値 1.47MΩ */
 };
