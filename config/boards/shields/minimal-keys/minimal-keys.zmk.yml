@@ -2,7 +2,7 @@ file_format: "1"
 id: minimal-keys
 name: minimal-keys
 type: shield
-# url: https://github.com/sayu-hub/zmk-config-minimal-keys
+url:https://github.com/hyhy-masa/zmk-pmw3610-driver.git
 requires: [seeeduino_xiao_ble]
 features:
   - keys
