@@ -30,6 +30,13 @@
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp BACKSPACE>;
         };
+
+        scroll: scroll {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "SCROLL";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+        };
     };
 
     keymap {
@@ -44,7 +51,7 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp LC(TAB) RC(TAB)>,
+                <&inc_dec_kp LG(TAB) RG(TAB)>,
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
@@ -56,7 +63,7 @@
 &kp LEFT_COMMAND  &kp LG(F)         &kp LG(X)          &kp LG(Z)     &kp LS(LG(Z))    &kp LG(Y)    &kp RG(A)        &kp RG(X)                                                                        &kp RIGHT_SHIFT
             >;
 
-            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
 
         layer_2 {
@@ -67,7 +74,7 @@
 &kp RG(SPACE)         &kp PLUS    &kp NUMBER_0  &kp RS(RG(V))  &kp RG(C)     &kp RG(V)       &trans          &trans                                                                         &kp PIPE
             >;
 
-            sensor-bindings = <&inc_dec_kp C_BLUE_BUTTON C_BLUE>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         layer_3 {
