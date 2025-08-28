@@ -74,7 +74,7 @@
 &mt LEFT_SHIFT ASTRK  &kp PERIOD  &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3  &kp EQUAL       &kp LG(SPACE)   &kp LEFT_BRACKET  &kp LG(C)           &kp LG(X)           &kp LG(V)            &kp F12
 &kp RG(SPACE)         &kp PLUS    &kp NUMBER_0  &kp RS(RG(V))  &kp RG(C)     &kp RG(V)       &trans          &trans                                                                         &kp PIPE
             >;
-
+            
             sensor-bindings = <&inc_dec_kp C_BLUE_BUTTON C_BLUE>;
         };
 
