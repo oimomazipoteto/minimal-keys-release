@@ -1,5 +1,7 @@
 #include "minimal-keys.dtsi"
 
+&xiao_serial { status = "disabled"; };
+
 &kscan0 {
         col-gpios
             = <&xiao_d 7 GPIO_ACTIVE_HIGH>
