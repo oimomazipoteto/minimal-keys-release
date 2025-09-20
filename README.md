@@ -1,2 +1,2 @@
-# minimal-keys2
-格子配列キーボードver2
+# minimal-keys
+格子配列キーボードverPubklic
