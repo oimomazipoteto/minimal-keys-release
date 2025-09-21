@@ -50,8 +50,8 @@
 &kp RCMD  &kp LEFT_ALT  &kp RIGHT_CONTROL  &mt LEFT_COMMAND CAPS  &lt 1 SPACE  &lt 3 ENTER    &lt 1 DEL  &lt 2 BACKSPACE                             &kp RIGHT_SHIFT
             >;
 
-            sensor-bindings =
-                <&inc_dec_kp LG(TAB) RG(TAB)>,
+          sensor-bindings =
+                <&scroll_up_down>,
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
