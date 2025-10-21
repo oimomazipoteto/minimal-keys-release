@@ -1,5 +1,6 @@
 #include "minimal-keys.dtsi"
 #include <input/processors.dtsi>
+
 &xiao_serial { status = "disabled"; };
 &default_transform {
     col-offset = <6>;
@@ -45,13 +46,7 @@
         19 // K
         20 // L
     >;
-
     require-prior-idle-ms = <200>;
-
-};
-
-&mkp_input_listener {
-    input-processors = <&zip_temp_layer 5 10000>;
 };
 
 / {
