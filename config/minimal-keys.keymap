@@ -139,8 +139,8 @@
             bindings = <
 &kp LG(LS(S))         &kp LC(W)           &kp LC(LS(TAB))        &kp LC(TAB)      &kp LC(LS(T))                               &kp RS(HOME)      &kp HOME           &kp UP_ARROW    &kp END           &kp RS(END)
 &mt LCTRL LC(A)       &mt LEFT_ALT LC(S)  &mt LEFT_WIN LA(LEFT)  &mt LCTRL LC(F)  &kp LC(L)      &kp LG(LS(S))    &trans      &kp RC(LEFT)      &kp LEFT_ARROW     &kp DOWN_ARROW  &kp RIGHT_ARROW   &kp RC(RIGHT)
-&mt LEFT_SHIFT LC(Z)  &kp LC(X)           &kp LC(C)              &kp LC(V)        &kp LC(LS(V))  &trans           &trans      &kp RS(RC(LEFT))  &kp RS(RC(RIGHT))  &kp LESS_THAN   &kp GREATER_THAN  &kp RIGHT_SHIFT
-&kp ESC               &kp DEL             &kp LEFT_WIN           &trans           &trans         &trans           &kp DELETE  &kp BACKSPACE                                                          &kp F10
+&mt LEFT_SHIFT LC(Z)  &kp LC(X)           &kp LC(C)              &kp LC(V)        &kp LC(LS(V))  &trans           &trans      &kp RS(RC(LEFT))  &kp RS(RC(RIGHT))  &kp LESS_THAN   &kp GREATER_THAN  &mt RIGHT_SHIFT RG(TAB)
+&kp ESC               &kp DEL             &kp LEFT_WIN           &kp TAB          &trans         &trans           &kp DELETE  &kp BACKSPACE                                                          &kp F10
             >;
         };
 
@@ -155,10 +155,10 @@
 
         windows {
             bindings = <
-&trans            &trans         &kp LG(E)  &kp LG(LS(T))  &kp LG(T)                           &trans        &kp LC(LS(TAB))  &kp UP_ARROW      &kp LC(TAB)  &trans
-&trans            &kp LG(LS(S))  &trans     &trans         &kp LG(G)      &trans    &kp RG(I)  &kp LA(LEFT)  &kp LEFT         &kp DOWN_ARROW    &kp RIGHT    &kp LA(RIGHT)
-&kp LS(LEFT_WIN)  &trans         &trans     &kp LG(V)      &trans         &trans    &kp RG(L)  &poteto       &trans           &kp RA(UP_ARROW)  &trans       &trans
-&trans            &trans         &trans     &kp LG(TAB)    &kp LG(SPACE)  &trans    &trans     &trans                                                        &trans
+&trans          &trans         &kp LG(E)  &kp LG(LS(T))  &kp LG(T)                           &trans        &kp LC(LS(TAB))  &kp RG(UP_ARROW)    &kp LC(TAB)    &trans
+&trans          &kp LG(LS(S))  &kp LG(D)  &trans         &kp LG(G)      &trans    &kp RG(I)  &kp LA(LEFT)  &kp RG(LEFT)     &kp RG(DOWN_ARROW)  &kp RG(RIGHT)  &kp LA(RIGHT)
+&kp LEFT_SHIFT  &trans         &trans     &kp LG(V)      &trans         &trans    &kp RG(L)  &poteto       &trans           &kp RA(UP_ARROW)    &trans         &kp RSHFT
+&trans          &trans         &trans     &kp LG(TAB)    &kp LG(SPACE)  &trans    &trans     &trans                                                            &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOLUME_UP>;
